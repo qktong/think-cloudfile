@@ -1,0 +1,27 @@
+{
+    "name": "qktong/think-message",
+    "description": "基于thinkphp6,上传文件至七牛云",
+    "type": "think-extend",
+    "license": "MIT",
+    "require": {
+        "qiniu/php-sdk": "^7.2"
+    },
+    "authors": [
+        {
+            "name": "qktong",
+            "email": "qktong@qq.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "qktong\\cloudfile\\": "src"
+        }
+    },
+    "extra": {
+        "think": {
+            "config": {
+                "qiniu": "config/qiniu.php"
+            }
+        }
+    }
+}
