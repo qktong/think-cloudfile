@@ -17,5 +17,21 @@ composer require "qktong/cloudfile"
 
 ```php
 //上传文件
+use qktong\cloudfile\FileService;
+$fileService = new FileService();
+$user_id    = '8';
+$file_name  = 'test':
+$extension  = 'jpg';
+$mime       = 'image/jpeg';
+$bucket     = 'test';
+$streamData = file_get_contents('php://input');
+$key        = $fileService->upload($user_id, $extension, $file_name, $mime, $streamData, $bucket);
+```
 
+```php
+//上传文件
+use qktong\cloudfile\FileService;
+$keys = 'test.jpg';
+$fileService = new FileService();
+$result      = $fileService->getFileUrl($keys,'');
 ```
