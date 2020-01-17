@@ -1,5 +1,5 @@
 {
-    "name": "qktong/think-message",
+    "name": "qktong/think-cloudfile",
     "description": "基于thinkphp6,上传文件至七牛云",
     "type": "think-extend",
     "license": "MIT",
