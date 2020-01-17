@@ -26,12 +26,12 @@ class File extends Model
         return $this->insert($data);
     }
 
-    public function getKey($key)
+    public function getFileKey($key)
     {
         return $this->where(['key' => $key])->value('key');
     }
 
-    public function getKeys($keys)
+    public function getFileKeys($keys)
     {
         $list   = $this->field('key,bucket')->where('key', 'in', $keys)->select();
         $result = [];

@@ -4,7 +4,7 @@ namespace qktong\cloudfile;
 
 use qktong\cloudfile\model\File;
 
-class FileService extends BaseService
+class FileService
 {
     public function getFileUrl($keys, $style)
     {
@@ -16,7 +16,7 @@ class FileService extends BaseService
         $file  = new File();
         $qiniu = new QiniuService();
         // 校验key是否存在
-        $key_list = $file->getKeys($keys);
+        $key_list = $file->getFileKeys($keys);
 
         $result = [];
         foreach ($keys as $file_key) {
@@ -46,7 +46,7 @@ class FileService extends BaseService
         }
         $file = new File();
         // 文件名重复
-        if ($file_name and $file->getKey($key)) {
+        if ($file_name and $file->getFileKey($key)) {
             return $this->error(20601, $key);
         }
 
